@@ -25,45 +25,47 @@ let newTask;
 // For storing the number of the task to remove
 let num;
 
-    // For storing the value of the removed task
-    let removed;
+// For storing the value of the removed task
+let removed;
 
-    let userInput = prompt(menu);
 
-    // Loops and continues to display until the user enters close
-    while (userInput !== `CLOSE`) {
+// Using the toUpperCase method to convert the users response to UPPERCASE
+let userInput = prompt(menu). toUpperCase();
 
-    // Checks if user entered TASKS
-    if (userInput ===`TASKS`){
+// Loops and continues to display until the user enters close
+while (userInput !== `CLOSE`) {
 
-        // 
-        for (task of tasks){
+// Checks if user entered TASKS
+if (userInput ===`TASKS`){
+
+// 
+for (task of tasks){
         
-        //    Using \n to tcreate a new line after each task
-        showTasks += `${task}\n`;
+//    Using \n to tcreate a new line after each task
+showTasks += `${task}\n`;
     }
 
-        // Displays current tasks to user
-        alert(showTasks);
+// Displays current tasks to user
+alert(showTasks);
 
-        // Set the value of the showTasks string variable back to an empty string
-        showTasks = "";
-    }
+// Set the value of the showTasks string variable back to an empty string
+showTasks = "";
+}
 
-    if (userInput === `NEW`){
+if (userInput === `NEW`){
 
-        newTask = prompt (`Please enter the new task:`);
+newTask = prompt (`Please enter the new task:`);
         
         
-        // Alerts user task has been added  
-        alert (`"${newTask}") has been added!`);
+// Alerts user task has been added  
+alert (`"${newTask}") has been added!`);
 
-        // Adds new user entry at the end of the tasks array
-        tasks.push(newTask);
-    }
+// Adds new user entry at the end of the tasks array
+tasks.push(newTask);
+}
 
-    // checks if user entered removed
-    if (userInput === `REMOVE`){
+// checks if user entered removed
+if (userInput === `REMOVE`){
 
 
     // Concatenates each task/item in the tasks array to the showTasks string variable. Also, sets/displays a number for each task.
@@ -74,7 +76,7 @@ let num;
         showTasks += `${i +1}: ${tasks[i]}\n`;
     }
 
-    // Prompts the user to enter a number and stores their response to the num variable. Also, using \n(linebreak) to create a new line.
+    // Prompts the user to enter a number and stores their response to the num variable. Also, using \n(line break) to create a new line.
     // Using a -1 to subtract a digit from the users entry so it may match the index array.
     // JavaScript will attempt to convert a string into a number when you try to subtract from it, like in ParseInt. 
     num = prompt (`Please enter a number to remove:\n${showTasks}`) -1;
@@ -86,12 +88,12 @@ let num;
     // Alerts user with the task/item that has been removed (NOTE: using index on the REMOVED variable here because splice returns the value that is removed as an item in an array)
     alert(`"${removed[0]}" has been removed`);
 
-    // Sets the value of the showTasks string variable back to an empty string
-    showTasks = ``;
+// Sets the value of the showTasks string variable back to an empty string
+showTasks = ``;
 }
     
-    // Displays the menu again
-    userInput = prompt (menu);
+// Displays the menu again
+ userInput = prompt (menu).toUpperCase();
 }
 
 // Alerts the user that they have closed the program
