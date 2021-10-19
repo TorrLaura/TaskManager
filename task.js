@@ -1,7 +1,7 @@
 // TASKMANAGER PROJECT
 
 // for restarting the TaskManager
-let restartTask = true;
+const enter = 
 
 // For storing the range of options
 let rangeOp;
@@ -9,7 +9,9 @@ let rangeOp;
 // For storing the option chosen
 let randomOp
 
-const start = `What would you like to do (Please enter one of the options below):
+const start = `TASK MANAGER
+
+What would you like to do (Please enter one of the options below):
 "TASKS - Display All Tasks"
 "NEW" - Add a New Task
 "Remove" - Remove a Task
