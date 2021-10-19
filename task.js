@@ -21,9 +21,7 @@ const tasks = [
 let showTasks = ``;
 
 
-
 let userInput = prompt(menu);
-
 
 // Loops and continues to display until the user enters close
 while (userInput !== `CLOSE`) {
@@ -43,6 +41,18 @@ while (userInput !== `CLOSE`) {
 
         // Set the value of the showTasks string variable back to an empty string
         showTasks = "";
+    }
+
+    if (userInput === `NEW`){
+
+        newTask = prompt (`Please enter the new task:`);
+        
+        
+        // Alerts user task has been added  
+        alert (`"${newTask}") has been added!`);
+        
+        // Prompts the user to enter a new task and stores their response
+        let newTask = prompt (`Please enter the new task:`);
     }
     
     // Displays the menu again
