@@ -55,6 +55,12 @@ showTasks = "";
 if (userInput === `NEW`){
 
 newTask = prompt (`Please enter the new task:`);
+
+
+// Continues looping and prompting the user until text is entered. IF user does not type anything and just clicks OK, then the value returned is an empty string.
+while(newTask === ``){
+    newTask = prompt(`Please enter the new task`);
+}
         
         
 // Alerts user task has been added  
