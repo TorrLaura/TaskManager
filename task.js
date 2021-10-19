@@ -88,6 +88,16 @@ if (userInput === `REMOVE`){
     num = prompt (`Please enter a number to remove:\n${showTasks}`) -1;
 
 
+    // Loop continues looping until the user enters a valid number.
+    // Verifies the user entered a whole (AKA not a decimal) that is within the number range. 
+    while(Math.floor(num) ! ==num || num <0 || num >= tasks.length || !num){
+
+        alert(`Not a valid entry`);
+        
+        num = prompt (`Please enter a number to remove:\n${showTasks}`) -1;
+
+    }
+
     // Removes the task/item selected by the user from the tasks array. Also, set the task/item that was removed to the REMOVED variable.
     removed = tasks.splice(num, 1);
     
